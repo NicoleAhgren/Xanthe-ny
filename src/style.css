@@ -22,10 +22,44 @@
 #header-text {
   text-align: end;
   padding-right: 20px;
+  padding-bottom: 7px;
   
 }
 a {
   margin-left: 20px;
-  
+  text-decoration: none;
+  color: black;
 }
+
+.link.active::after{
+  content: '';
+  position: absolute;
+  bottom: -3px; 
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+.link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; 
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent rgb(92, 92, 91) transparent;
+}
+.link {
+  position: relative;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.link:hover {
+  color: rgb(92, 92, 91);
+}
+
 
