@@ -1,0 +1,31 @@
+#header {
+  background-color: #ffffff;
+  width: 90%;
+  height: 100px;
+  align-content:last baseline;
+  padding-left: 15px;
+  border-bottom: 1px solid black;
+  margin-left: 5%;
+}
+#logo {
+  padding-right: 15px;
+  border-right: 2px solid black;
+}
+#XthseLogo {
+  padding-left: 15px;
+}
+#XthseLogo, #logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: -10px;
+}
+#header-text {
+  text-align: end;
+  padding-right: 20px;
+  
+}
+a {
+  margin-left: 20px;
+  
+}
+
