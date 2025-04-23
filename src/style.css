@@ -63,9 +63,39 @@ a {
 }
 
 #content {
+  width: 90%;
   display: grid;
+  place-items: center;
   grid-template-columns: 1fr 1fr;
-  gap: 20em;
+  margin: 0 auto;
+  padding-top: 50px;
+  gap: 5em;
+
+}
+
+.Pics {
+  width: 600px;
+  height: 330px;
+  border-radius: 30px;
+  border: 1px solid #f5ba46;
+}
+.textDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+h1 {
+  font-size: 40px;
+  color: rgb(69, 69, 69);
+}
+p {
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 17px;
+  font-family: fantasy;
 }
 
 
