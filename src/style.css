@@ -62,4 +62,10 @@ a {
   color: rgb(92, 92, 91);
 }
 
+#content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20em;
+}
+
 
