@@ -98,4 +98,33 @@ p {
   font-family: fantasy;
 }
 
+#carousel {
+  display: flex;
+  overflow: hidden;
+  height: 30px;
+  width: auto;
+  position: relative;
+  margin-top: 100px;
+}
+
+.image-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: max-content; /* Gör så att bredden anpassas till antalet bilder */
+  animation: slide 10s linear infinite;
+}
+@keyframes slide {
+  from {
+    transform: transalteX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Flytta hela bredden av bildspåret */
+  }
+}
+.CPics{
+  height: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 
