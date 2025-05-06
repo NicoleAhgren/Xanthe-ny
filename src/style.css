@@ -7,6 +7,7 @@
   border-bottom: 1px solid black;
   margin-left: 5%;
 }
+
 #logo {
   padding-right: 15px;
   border-right: 2px solid black;
@@ -102,24 +103,15 @@ p {
   display: flex;
   overflow: hidden;
   height: 30px;
-  width: auto;
-  position: relative;
-  margin-top: 100px;
-}
-
+  width: 1200px;
+  margin: 125px;
+  margin-top: 50px;
+  border-radius: 20px;
+  }
 .image-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: max-content; /* Gör så att bredden anpassas till antalet bilder */
-  animation: slide 10s linear infinite;
-}
-@keyframes slide {
-  from {
-    transform: transalteX(0);
-  }
-  to {
-    transform: translateX(-50%); /* Flytta hela bredden av bildspåret */
-  }
+  width: max-content;
+
 }
 .CPics{
   height: 30px;
