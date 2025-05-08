@@ -12,7 +12,7 @@ app.get('/views/:filename', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/views', req.params.filename))
 })
 
-const upload = multer({ dest: 'uploads/' })
+// const upload = multer({ dest: 'uploads/' })
 
 app.post("/submit-form", upload.single("cv"), async (req, res) => {
   const { name, email, message } = req.body
@@ -22,15 +22,18 @@ app.post("/submit-form", upload.single("cv"), async (req, res) => {
 
   // Konfigurera e-post
   const transporter = nodemailer.createTransport({
-      service: "Gmail",
-      auth: {
-          user: process.env.EMAIL,
-          pass: process.env.PASSWORD
-      }
-  })
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+    }
+});
   const mailOptions = {
-    from: email,
-    to: "kontakt@xanthe.se",
+    from: process.env.EMAIL,
+    replyTo: email,
+    to: "nicole.ahgren@gmail.com",
     subject: `Jobbansökan från ${name}`,
     text: message,
     attachments: [{ path: cvFile.path }]
