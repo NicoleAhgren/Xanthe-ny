@@ -12,7 +12,7 @@ app.get('/views/:filename', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/views', req.params.filename))
 })
 
-// const upload = multer({ dest: 'uploads/' })
+const upload = multer({ dest: 'uploads/' })
 
 app.post("/submit-form", upload.single("cv"), async (req, res) => {
   const { name, email, message } = req.body

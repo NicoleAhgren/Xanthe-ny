@@ -160,7 +160,7 @@ input:focus, textarea:focus {
   width: 100%;
   padding: 12px;
   background: #f5ba46;
-  color: white;
+  color: #333;
   font-size: 20px;
   font-weight: bold;
   border: none;
