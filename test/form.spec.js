@@ -13,6 +13,6 @@ describe("Formulärtest", () => {
       // Kontrollera att en bekräftelse 
       cy.on("window:alert", (txt) => {
         expect(txt).to.contains("Formuläret har skickats!")
-      });
+      })
   })
 })

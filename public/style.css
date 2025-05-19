@@ -99,19 +99,25 @@ p {
   font-family: fantasy;
 }
 
+#carouselText {
+  position: absolute;
+  left: 40%;
+  font-size: 20px;
+  font-family:sans-serif;
+  font-weight: bold;
+}
 #carousel {
   display: flex;
   overflow: hidden;
   height: 30px;
   width: 1200px;
   margin: 125px;
-  margin-top: 50px;
+  margin-top: 70px;
   border-radius: 20px;
   }
 .image-track {
   display: flex;
   width: max-content;
-
 }
 .CPics{
   height: 30px;
@@ -179,6 +185,8 @@ input:focus, textarea:focus {
 .startPic {
   width: 100%;	
   height: auto;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 #startText {
   width: 20%;
