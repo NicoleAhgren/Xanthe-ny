@@ -113,6 +113,7 @@ p {
   width: 1200px;
   margin: 125px;
   margin-top: 70px;
+  margin-bottom: 30px;
   border-radius: 20px;
   }
 .image-track {
@@ -181,24 +182,48 @@ input:focus, textarea:focus {
   position: relative;
   display: inline-block;
   width: 100%;
-}
+} 
 #startPic {
   width: 100%;	
   height: auto;
   margin-bottom: 20px;
   margin-top: 40px;
 }
+
 #startText {
   width: 20%;
-  height: 20%;
-  font-size: 25px;
+  height: 25%;
   position: absolute;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.367);
-  top: 40%;
+  background-color: rgba(255, 255, 255, 0.916);
+  top: 60%;
   left: 12%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Rundade hörn för en modern look */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+} 
+#startText p {
+  font-size: 20px;
+  color: #333; /* Mörkare färg för bättre läsbarhet */
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }
+#startText button {
+  background-color: #f5ba46; /* LinkedIn-blå färg */
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#startText button:hover {
+  background-color: #e0a335;
+  transform: scale(1.05); /* Gör att knappen lyfts vid hover */
+}
+
 footer {
   width: 90%;
   margin: 5%;
@@ -269,9 +294,19 @@ iframe {
 
 #employees a {
   margin-top: 10px;
-  text-decoration: none;
   color: #0077b5; /* LinkedIn blå färg */
   font-weight: bold;
+}
+#employees a:hover {
+  text-decoration: underline;
+}
+
+#imageContainer {
+  width: 100%;
+  height: 400px; /* Anpassa höjden efter behov */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Gör formuläret responsivt */
