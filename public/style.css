@@ -232,23 +232,46 @@ iframe {
   border: none;
 }
 
-
 #employees {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 10%;
-  padding-top: 5%;
+  gap: 50px;
+  padding: 5%;
 }
+
 .employeeRuta {
   display: flex;
-  flex-direction: column;
-  border: 1px solid #000000;
-  width: 50%;
-  position: relative;
+  align-items: center; /* Justerar innehållet vertikalt */
+  gap: 3em;
+  padding: 10px;
+  border: 1px solid #f5ba46;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.employeeInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrera namn under bild */
+}
+
 .employeePic {
-  width: 30px;
-  height: auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+}
+
+.employeeDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+#employees a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #0077b5; /* LinkedIn blå färg */
+  font-weight: bold;
 }
 /* Gör formuläret responsivt */
 @media (max-width: 768px) {
