@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset()
       } else {
         const errorText = await response.text()
-        alert("Något gick fel: " + errorText)
+        console.error(errorText)
       }
     } catch (error) {
       console.error("Fel vid formulärskickning:", error)
