@@ -14,5 +14,5 @@ function changeImage() {
   imageElement.src = images[currentIndex]
 }
 
-setInterval(changeImage, 2000)
+setInterval(changeImage, 4000)
 }

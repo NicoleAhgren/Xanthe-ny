@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector('.image-track')
   let position = 0
-  const speed = 0.5 // Ändra för mjukare/snabbare rörelse
+  const speed = 0.3 // Ändra för mjukare/snabbare rörelse
 
   function moveImages() {
     position -= speed;
