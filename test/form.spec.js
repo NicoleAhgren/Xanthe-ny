@@ -1,6 +1,5 @@
 describe("Formulärtest", () => {
   it("ska kunna skicka formuläret", () => {
-      // cy.visit("http://localhost:2002") // Ändra till din lokala utvecklingsserver
 
       // Fyll i formuläret
       cy.get("#name").type("Nicole")
@@ -11,8 +10,8 @@ describe("Formulärtest", () => {
       // Skicka formuläret
       cy.get("#contactForm").submit()
       // Kontrollera att en bekräftelse 
-      cy.on("window:alert", (txt) => {
-        expect(txt).to.contains("Formuläret har skickats!")
+      cy.get("p")
+        .should("contain.text", "Ansökan skickad!")
+        .and("have.css", "color", "rgb(0, 128, 0)") // Grön färg
       })
   })
-})

@@ -3,12 +3,14 @@ import path from "path"
 import multer from "multer"
 import nodemailer from "nodemailer"
 import { fileURLToPath } from "url";
+import dotenv from "dotenv"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express()
 const port = 2002
+dotenv.config()
 
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))
@@ -23,7 +25,7 @@ app.post("/submit-form", upload.single("cv"), async (req, res) => {
   const { name, email, message } = req.body
   const cvFile = req.file
 
-  require("dotenv").config()
+
 
   // Konfigurera e-post
   const transporter = nodemailer.createTransport({
