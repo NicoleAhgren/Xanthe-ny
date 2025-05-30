@@ -1,9 +1,10 @@
-const express = require("express")
+import express from "express"
+import path from "path"
+import multer from "multer"
+import nodemailer from "nodemailer"
+
 const app = express()
 const port = 2002
-const path = require("path")
-const multer = require("multer")
-const nodemailer = require("nodemailer")
 
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))

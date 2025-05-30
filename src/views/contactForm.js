@@ -13,8 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
       })
 
       if (response.ok) {
-        alert("Formuläret har skickats!")
         form.reset()
+        const successMessage = document.createElement("p")
+        successMessage.textContent = "Ansökan skickad!"
+        successMessage.style.color = "green"
+        form.appendChild(successMessage)
       } else {
         const errorText = await response.text()
         console.error(errorText)
